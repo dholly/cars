@@ -90,7 +90,8 @@ const swiperOptions = {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 20px;
   }
 
   &__tags {
