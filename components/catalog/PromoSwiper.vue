@@ -87,7 +87,6 @@ const swiperOptions = {
   &__content {
     position: relative;
     z-index: 1;
-    padding: 24px;
     height: 100%;
     display: flex;
     flex-direction: column;
