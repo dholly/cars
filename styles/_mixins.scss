@@ -1,0 +1,55 @@
+@use "sass:math";
+
+$xl:1920px;
+$xlarge: 1600px;
+$large: 1440px;
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet-lg: 900px;
+$tablet: 768px;
+$mobile-lg: 575px;
+$mobile: 480px;
+$mobile-sm: 420px;
+$xs: 360px;
+
+@function num($input) {
+  @return math.div($input, $input * 0 + 1);
+}
+
+@mixin resp-font($start, $finish, $startvp, $finishvp) {
+  font-size: calc(#{$finish} + #{num($start) - num($finish)} * (100vw - #{$finishvp}) / #{num($startvp) - num($finishvp)});
+}
+
+@mixin resp-property($property, $start, $finish, $startvp, $finishvp) {
+
+  #{$property}: calc(#{$finish} + #{num($start) - num($finish)} * (100vw - #{$finishvp}) / #{num($startvp) - num($finishvp)});
+}
+
+@mixin respond($breakpoint, $minmax: max) {
+  @if ($minmax == min) {
+    @media (min-width: ($breakpoint + 1px)) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+
+@mixin img-set($x1, $x2) {
+  background-image: $x1;
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+
+    background-image: $x2;
+  }
+}
+
+@function rem($pix) {
+  @return calc($pix / 15px) * 1rem;
+}

@@ -1,0 +1,237 @@
+@use "@/styles/mixins" as *;
+
+html {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.33;
+  color:var(--color-main-text);
+  fill: currentColor;
+  stroke: currentColor;
+
+  @include respond($xlarge){
+    font-size:13px
+  }
+  @include respond($large){
+    font-size:12px;
+  }
+}
+
+input[type=text],
+textarea {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+h1{
+  font-size:36px;
+  font-weight: 700;
+  @include respond($xlarge){
+    @include resp-font(32px,20px,$xlarge,360px);
+  }
+  &.page-title{
+    margin-bottom: 30px;
+    @include respond($xl){
+      margin-bottom:25px;
+    }
+    @include respond($xlarge){
+      margin-bottom:20px;
+    }
+  }
+}
+h2{
+  font-size: rem(36px);
+  font-weight: 700;
+
+  @include respond($xlarge){
+    @include resp-font(32px,20px,$xlarge,360px);
+  }
+}
+h3{
+  font-size: rem(30px);
+  font-weight: 700;
+}
+h4{
+  font-size: rem(24px);
+  font-weight: 700;
+
+  @include respond($desktop){
+    @include resp-font(24px,18px,$desktop,360px);
+  }
+}
+h5{
+  font-size: rem(20px);
+  font-weight: 700;
+}
+h6{
+  font-size: rem(18px);
+  font-weight: 700;
+}
+.section-title{
+  font-size: 24px;
+  margin-bottom: 20px;
+  @include respond($desktop){
+    @include resp-font(24px,18px,$desktop,360px);
+  }
+}
+.title{
+  font-size: rem(24px);
+  font-weight: 600;
+  color:var(--color-blue);
+}
+.subtitle{
+  font-weight: 600;
+  font-size:18px;
+  @include respond($mobile){
+    font-size:16px;
+  }
+}
+.caption{
+  font-size:13px;
+  @include respond($mobile){
+    font-size:12px;
+  }
+}
+.caption.sm{
+  font-size:10px;
+}
+p.lg, div.lg, span.lg{
+  font-size:18px;
+  @include respond($mobile){
+    font-size:16px;
+  }
+}
+p.sm, div.sm, span.sm{
+  font-size:13px;
+  @include respond($mobile){
+    font-size:12px;
+  }
+}
+
+a{
+  text-decoration: none;
+  color:var(--color-blue);
+  &:hover{
+    text-decoration: underline;
+  }
+}
+b{
+  font-weight: 700;
+}
+.mt20{
+  margin-top:rem(20px);
+}
+
+.default-scroll{
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  &::-webkit-scrollbar-track {
+    padding: 5px 0;
+    background: transparent;
+    border-radius: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-gray-very-dark);
+    border-radius: 6px;
+  }
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  border-bottom: var(--delimiter-border);
+}
+
+.dropdown {
+  border-radius: 13px;
+  background: var(--secondary, #FFF);
+  box-shadow: var(--dropdown-shadow);
+
+  &__item {
+    display: flex;
+    padding: 8px 8px 8px 18px;
+    align-items: center;
+    gap: 10px;
+    transition: var(--default-transition);
+
+    &:hover {
+      background: var(--color-light-grey);
+    }
+  }
+}
+
+.color-gray{
+  color:var(--color-gray-text);
+  opacity: .6;
+}
+.color-blue{
+  color:var(--color-light-blue);
+}
+
+.text-gray{
+  color: var(--color-gray-text);
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-results{
+  text-align: center;
+  width: 100%;
+  padding:30px 0;
+  color:var(--color-gray-text);
+  opacity: .6;
+  font-size:15px;
+  font-weight: 500;
+}
+.clear-link-styles{
+  &:hover{
+    text-decoration: none;
+  }
+  color:inherit;
+}
+
+.tooltip {
+  border-radius: rem(10px);
+  background: #222;
+  color: var(--color-white);
+  font-size: rem(12px);
+  padding: rem(8px);
+  transform: translate(0, rem(-8px));
+  position: absolute;
+  animation: tooltipIn .25s ease-in;
+
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: rem(8px) solid transparent;
+    border-right: rem(8px) solid transparent;
+    border-top: rem(8px) solid #222;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, rem(-1px));
+  }
+}
+
+
+#confetti {
+  pointer-events: none !important;
+}
+
+.error-message{
+  color:var(--color-alert);
+  font-size:rem(18px);
+}

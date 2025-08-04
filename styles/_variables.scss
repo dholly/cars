@@ -1,0 +1,50 @@
+:root {
+  --color-bg:#fff;
+  --color-white: #fff;
+  --secondary: var(--color-white);
+  --color-blue-accent: #F2F7FF;
+  --color-light-blue: #032D8C;
+  --color-gold: #CC9D6A;
+  --color-light-grey: #F5F5F5;
+  --color-line-medium: #E5E5E5;
+  --color-alert-15: rgba(209, 65, 65, 0.15);
+  --color-alert: #D14141;
+  --color-alert-5: rgba(209, 65, 65, 0.05);
+  --color-success: #43d663;
+  --color-main-text: #222;
+  --color-blue: #011E60;
+  --color-gold-dark: #AC835C;
+  --color-gray: #EBEBEB;
+  --color-gray-very-dark: #B7B7B7;
+  --color-line-light: #DEDEDE;
+  --color-gray-text: #636363;
+  --color-dark-grey: #D4D4D4;
+  --color-alert-20: rgba(209, 65, 65, 0.20);
+  --color-blue-light-n2: #4A66A4;
+  --color-border:#d9dde4;
+  --color-accent-outline:#d2ac74;
+  --color-text-secondary: #383838;
+  --color-blue-light-10: rgba(74, 102, 164, 0.10);
+  --color-accent-medium-20: rgba(210, 172, 116, 0.20);
+  --color-blue-light-215: rgba(74, 102, 164, 0.15);
+  --color-modal-overlay: rgba(0, 0, 0, 0.502);
+  --color-input-focus-border: var(--color-blue-light-n2);
+  --color-green: #5AB544;
+  --color-green-light: #5cdb3c;
+  --color-brown: #836133;
+  --color-brown-light:#bd9257;
+  --dropdown-shadow: 0px 15px 37px 0px rgba(0, 0, 0, 0.17);
+
+  --color-notification: #F3F7FF;
+
+  --default-transition: .3s ease-in-out;
+  --delimiter-border: 1px solid var(--color-line-light);
+  --button-transition: .3s color ease-in-out, .3s background ease-in-out, .3s border ease-in-out;
+  --input-transition: var(--default-transition);
+  --checkbox-transition: var(--default-transition);
+  --radio-transition: var(--default-transition);
+  --switcher-transition: var(--default-transition);
+  --select-transition: .25s ease-in-out;
+  --tabs-transition: var(--default-transition);
+  --chips-transition: var(--button-transition);
+}
