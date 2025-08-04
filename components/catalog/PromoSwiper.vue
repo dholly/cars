@@ -66,8 +66,8 @@ const swiperOptions = {
 
 <style scoped lang="scss">
 .promo-swiper {
-  padding: 40px 20px 20px 20px;
-  width: 802px;
+  width: 100%;
+  max-width: 802px;
   height: 555px;
   .swiper{
     border-radius: 24px;
